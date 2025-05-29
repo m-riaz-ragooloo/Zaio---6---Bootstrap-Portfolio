@@ -20,7 +20,7 @@
     <body class="bg-dark">
     <div class="banner-wrap vh-100 vw-100 text-white"> 
         <div class="overlay"></div>
-        <header class="px-5 p-3 text-white fixed-top">
+        <header class="px-5 p-3 text-white fixed-top scrolling">
             <div>
                 <h3 class="float-md-start text-center">Portfolio</h3> 
                 <nav class="nav nav-masthead justify-content-center float-md-end"> 
@@ -121,35 +121,42 @@
 
 <!-- Add links to socials -->
         <section id="contact">
-    <div class="container p-3 mt-5 text-center">
-        <div class="card p-3">
-            <div class="card-body px-5">
-                <h1 ><mark>Lets connect</mark></h1>
-                <p class="lead">Feel free to reach out!</p>
-                <p class="fs-2 ">
-                    <a href="" target="_blank"><i class="bi bi-linkedin m-2 text-dark"></i></a>
-                    <a href="" target="_blank"><i class="bi bi-github m-2 text-dark"></i></a>
-                    <a href="" target="_blank"><i class="bi bi-envelope-fill m-2 text-dark"></i></a>
-                </p>
-                <form>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="name" placeholder="Enter First Name">
+            <div class="container p-3 mt-5 text-center">
+                <div class="card p-3">
+                    <div class="card-body px-5">
+                        <h1 ><mark>Lets connect</mark></h1>
+                        <p class="lead">Feel free to reach out!</p>
+                        <p class="fs-2 ">
+                            <a href="" target="_blank"><i class="bi bi-linkedin m-2 text-dark"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-github m-2 text-dark"></i></a>
+                            <a href="" target="_blank"><i class="bi bi-envelope-fill m-2 text-dark"></i></a>
+                        </p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Enter First Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email Address">
+                                <div id="emailHelp" class="form-text"></div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="subject" placeholder="Enter Subject">
+                            </div>
+                            <div>
+                                <textarea class="form-control" aria-label="With textarea" placeholder="Enter Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark mt-3">Submit</button>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email Address">
-                        <div id="emailHelp" class="form-text"></div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="subject" placeholder="Enter Subject">
-                    </div>
-                    <div>
-                        <textarea class="form-control" aria-label="With textarea" placeholder="Enter Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-dark mt-3">Submit</button>
-                </form>
+                </div>
             </div>
-        </div>
-    </div>
         </section>
+
+        <script>
+            window.addEventListener("scroll", () => {
+                const header = document.querySelector("header")
+                header.classList.toggle("scrolling", window.scrollY > 0)
+            })
+        </script>
     </body>
 </html>
